@@ -9,8 +9,13 @@
 
     $("#houseDropdown li a").on("click", function() {
         var house = $(this).text();
-        $pickButton.html("<input type='radio'>"+house);
+        $pickButton.html("<input type='radio' id='radioSet'>"+house);
+        console.log($("#radioSet").parents().get(1));
+        console.log($("label[class^='active']"));
+        $("#radioSet").parent().addClass("active");
+        //$pickButton.addClass('active');
         //$pickButton.text(house);
+
     });
 
 })();

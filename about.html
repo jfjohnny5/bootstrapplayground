@@ -53,6 +53,8 @@
                         <li><a href="#">&raquo;</a></li>
                     </ul>
 
+                    <!-- Main Content -->
+
                     <div class="well well-lg">
                         <p class="lead">
                             Lorem ipsum dolar sit amet, consectetur adipiscing elit. Fusce sed cursus lacus. Sed bibendum vel massa non tempus. Suspendisse dignissim, nulla at ultrices auctor, orci mi consequat leo, non cursus massa metus pulvinar urna. Suspendisse gravida consequat mauris sed gravida. Sed et metus luctus, euismod lacus eget, finibus justo. Morbi non accumsan libero. Cras placerat odio quis leo interdum, at tempor risus viverra. Donec facilisis magna sit amet justo ornare egestas. Praesent mollis, lorem eget vulputate finibus, nulla turpis tincidunt lacus, ut fermentum ligula tellus eget massa. Mauris ac elit id neque auctor convallis.
@@ -72,6 +74,8 @@
                         <li class="previous"><a href="#">&larr; Prev</a></li>
                         <li class="next"><a href="#">Next &rarr;</a></li>
                     </ul>
+
+                    <!-- Table -->
 
                     <div class="row">
                         <div class="col-md-6">
@@ -121,74 +125,125 @@
                             </table>
                         </div>
                     </div>
-                    <h3>List of Stuff</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="http://www.google.com">Stuff 1A</a></li>
-                        <li><a href="http://www.google.com">Stuff 2B</a></li>
-                        <li><a href="http://www.google.com">Stuff 3C</a></li>
-                        <li><a href="http://www.google.com">Stuff 4D</a></li>
-                        <li><a href="http://www.google.com">Stuff 5E</a></li>
+
+                    <!-- Collapse Demo -->
+
+                    <ul class="nav nav-pills navbar-default">
+                        <li><a href="#stuff" data-toggle="collapse">List of Stuff</a></li>
+                        <li><a href="#pics" data-toggle="collapse">Pictures</a></li>
                     </ul>
+
+                    <div class="collapse in" id="stuff">
+                        <h3>List of Stuff</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.google.com">Stuff 1A</a></li>
+                            <li><a href="http://www.google.com">Stuff 2B</a></li>
+                            <li><a href="http://www.google.com">Stuff 3C</a></li>
+                            <li><a href="http://www.google.com">Stuff 4D</a></li>
+                            <li><a href="http://www.google.com">Stuff 5E</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse" id="pics">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumbnail">
+                                <a href="#"><img class="image-responsive" src="http://placehold.it/350x250"></a>
+                                <div class="caption">
+                                    <h3>First</h3>
+                                    <p>
+                                        The first placeholder image.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumbnail">
+                                <a href="#"><img class="image-responsive" src="http://placehold.it/500x500"></a>
+                                <div class="caption">
+                                    <h3>Second</h3>
+                                    <p>
+                                        This image is way more awesome than the first one. For one thing, look at how much longer this caption is! Everyone knows that a longer caption means it's a <strong>MUCH</strong> better picture. Obviously.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumbnail">
+                                <a href="#"><img class="image-responsive" src="http://placehold.it/640x480"></a>
+                                <div class="caption">
+                                    <h3>Third</h3>
+                                    <p>
+                                        The third placeholder image.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumbnail">
+                                <a href="#"><img class="image-responsive" src="http://placehold.it/800x600"></a>
+                                <div class="caption">
+                                    <h3>Fourth</h3>
+                                    <p>
+                                        The fourth placeholder image.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumbnail">
+                                <a href="#"><img class="image-responsive" src="http://placehold.it/320x240"></a>
+                                <div class="caption">
+                                    <h3>Last</h3>
+                                    <p>
+                                        The last placeholder image.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+                    <!-- Accordion Demo -->
+
+                    <div id="accordion">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"><a href="#first" data-toggle="collapse" data-parent="#accordion" >First</a></div>
+                            </div>
+                            <div class="panel-collapse collapse" id="first">
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="http://placehold.it/768x597">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"><a href="#second" data-toggle="collapse" data-parent="#accordion" >Second</a></div>
+                            </div>
+                            <div class="panel-collapse collapse" id="second">
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="http://placehold.it/333x585">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"><a href="#third" data-toggle="collapse" data-parent="#accordion" >Third</a></div>
+                            </div>
+                            <div class="panel-collapse collapse" id="third">
+                                <div class="panel-body">
+                                    <img class="img-responsive" src="http://placehold.it/555x428">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <a href="#"><img class="image-responsive" src="http://placehold.it/350x250"></a>
-                    <div class="caption">
-                        <h3>First</h3>
-                        <p>
-                            The first placeholder image.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <a href="#"><img class="image-responsive" src="http://placehold.it/500x500"></a>
-                    <div class="caption">
-                        <h3>Second</h3>
-                        <p>
-                            This image is way more awesome than the first one. For one thing, look at how much longer this caption is! Everyone knows that a longer caption means it's a <strong>MUCH</strong> better picture. Obviously.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <a href="#"><img class="image-responsive" src="http://placehold.it/640x480"></a>
-                    <div class="caption">
-                        <h3>Third</h3>
-                        <p>
-                            The third placeholder image.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <a href="#"><img class="image-responsive" src="http://placehold.it/800x600"></a>
-                    <div class="caption">
-                        <h3>Fourth</h3>
-                        <p>
-                            The fourth placeholder image.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <a href="#"><img class="image-responsive" src="http://placehold.it/320x240"></a>
-                    <div class="caption">
-                        <h3>Last</h3>
-                        <p>
-                            The last placeholder image.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </section>
         <footer class="container">
             <hr>
-            <p>Contents of this pages copyright Me - MMXVII</p>
+            <p>Contents of this pages copyright &copy; Me - MMXVII</p>
         </footer>
     </div>
     <script

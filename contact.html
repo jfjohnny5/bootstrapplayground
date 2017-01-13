@@ -32,73 +32,125 @@
         </div>
         <section id="body" class="container">
             <h1>E.T. Phone Home</h1>
+            <div class="alert alert-warning collapse" id="sentAlert">
+                <a href="#" data-dismiss="alert" class="close">&times;</a>
+                <p>
+                    ALERT! The form doesn't actually do anything...
+                </p>
+            </div>
             <p>No aliens were harmed in the creation of this form page.</p>
-            <div class="col-md-6">
-                <form>
-                    <div class="form-group">
-                        <label for="nameInput">Your Name</label>
-                        <div class="input-group">
-                            <input type="text" name="nameInput" class="form-control" placeholder="What your mom yells when she's mad at you"/>
-                            <span class="input-group-addon">!!!</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="emailInput" class="control-label">Email</label>
-                        <div class="input-group">
-                            <span class="input-group-addon">@</span>
-                            <input type="email" name="emailInput" class="form-control" placeholder="What you check too obsessively"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Your House</label><br/>
-                        <div class="btn-group btn-group-sm" data-toggle="buttons">
-                            <label class="btn btn-default houseRadios"><input type="radio">Gryffindor</label>
-                            <label class="btn btn-default houseRadios"><input type="radio">Ravenclaw</label>
-                            <label class="btn btn-default houseRadios"><input type="radio">Hufflepuff</label>
-                            <label class="btn btn-default houseRadios"><input type="radio">Slytherin</label>
-                            <div class="btn-group btn-group-sm">
-                                <label class="btn btn-default houseRadios" id="pickButton"><input type="radio">Other</label>
-                                <button class="btn btn-default" data-toggle="dropdown"><span class="caret"></span></button>
-                                <ul class="dropdown-menu" id="houseDropdown">
-                                    <li><a href="#" tabindex="-1">Durmstrang</a></li>
-                                    <li><a href="#" tabindex="-1">Beauxbatons</a></li>
-                                    <li class="divider"></li>
-                                    <li class="disabled"><a href="#" tabindex="-1">Muggle</a></li>
-                                </ul>
+
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#formTab" data-toggle="tab">Contact Form</a></li>
+                <li><a href="#addressTab" data-toggle="tab">Address</a></li>
+            </ul>
+
+            <!-- Form Demo -->
+
+            <div class="tab tab-content">
+                <div class="well tab-pane active" id="formTab">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nameInput">Your Name</label>
+                            <div class="input-group">
+                                <input type="text" name="nameInput" class="form-control" placeholder="What your mom yells when she's mad at you"/>
+                                <span class="input-group-addon">!!!</span>
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="emailInput" class="control-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input type="email" name="emailInput" class="form-control" placeholder="What you check too obsessively"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Your House</label><br/>
+                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                <label class="btn btn-default houseRadios"><input type="radio">Gryffindor</label>
+                                <label class="btn btn-default houseRadios"><input type="radio">Ravenclaw</label>
+                                <label class="btn btn-default houseRadios"><input type="radio">Hufflepuff</label>
+                                <label class="btn btn-default houseRadios"><input type="radio">Slytherin</label>
+                                <div class="btn-group btn-group-sm">
+                                    <label class="btn btn-default houseRadios" id="pickButton"><input type="radio">Other</label>
+                                    <button class="btn btn-default" data-toggle="dropdown"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu" id="houseDropdown">
+                                        <li><a href="#" tabindex="-1">Durmstrang</a></li>
+                                        <li><a href="#" tabindex="-1">Beauxbatons</a></li>
+                                        <li class="divider"></li>
+                                        <li class="disabled"><a href="#" tabindex="-1">Muggle</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label>Reason for Contact</label>
-                        <select class="form-control">
-                            <option>Express Adoration</option>
-                            <option>Ordering a Frosty Beverage</option>
-                            <option>Complaint</option>
-                            <option>I am lost</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea class="form-control" cols="40" rows="6" placeholder="Say what you came to say" ></textarea>
-                        <input type="submit" value="Submit" class="btn btn-success"/>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label>Reason for Contact</label>
+                            <select class="form-control">
+                                <option>Express Adoration</option>
+                                <option>Ordering a Frosty Beverage</option>
+                                <option>Complaint</option>
+                                <option>I am lost</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" cols="40" rows="6" placeholder="Say what you came to say" ></textarea>
+                            <input type="submit" value="Submit" class="btn btn-success" data-toggle="tooltip" title="Press Here" data-placement="right"/>
+                        </div>
+                    </form>
+
+                    <!-- Old show dialog button
+                    <a href="#sentDialog" class="btn btn-info" data-toggle="modal">Show Dialog...</a>
+                    -->
+
+
+                </div>
+                <div class="well tab-pane" id="addressTab">
+                    <h3>Fake Address</h3>
+                    <address>
+                        Bootstrap Playground Inc.<br/>
+                        42 Hitchhiker Lane<br/>
+                        Storybrooke, ME 03901<br/>
+                        <abbr title="Phone">T:</abbr>
+                        207.555.1234
+                    </address>
+                    <p>
+                        <strong>Support: </strong><a href="mailto:NoOneCares@bootstrappg.com">NoOneCares@bootstrappg.com</a>
+                        <br/>
+                        <strong>Marketing: </strong><a href="mailto:ShowMeTheMoney@bootstrappg.com">ShowMeTheMoney@bootstrappg.com</a>
+                    </p>
+                </div>
             </div>
-            <h3>Fake Address</h3>
-            <address>
-                Bootstrap Playground Inc.<br/>
-                42 Hitchhiker Lane<br/>
-                Storybrooke, ME 03901<br/>
-                <abbr title="Phone">T:</abbr>
-                207.555.1234
-            </address>
+
         </section>
         <footer class="container">
             <hr>
-            <p>Contents of this pages copyright Me - MMXVII</p>
+            <p>Contents of this pages copyright &copy; Me - MMXVII</p>
         </footer>
     </div>
+
+    <!-- Modal Window Demo -->
+
+    <div class="modal fade" id="sentDialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h4>Thanks for clicking!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This form doesn't really work. Fooled you!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script
             src="https://code.jquery.com/jquery-3.1.1.js"
             <!--integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

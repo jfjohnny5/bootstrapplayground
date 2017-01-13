@@ -37,11 +37,17 @@
                 <form>
                     <div class="form-group">
                         <label for="nameInput">Your Name</label>
-                        <input type="text" title="nameInput" class="form-control" placeholder="What your mom yells when she's mad at you"/>
+                        <div class="input-group">
+                            <input type="text" name="nameInput" class="form-control" placeholder="What your mom yells when she's mad at you"/>
+                            <span class="input-group-addon">!!!</span>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="emailInput">Email</label>
-                        <input type="text" title="emailInput" class="form-control" placeholder="What you check too obsessively"/>
+                        <label for="emailInput" class="control-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="email" name="emailInput" class="form-control" placeholder="What you check too obsessively"/>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Your House</label><br/>
